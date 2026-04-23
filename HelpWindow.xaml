@@ -1,0 +1,125 @@
+<Window x:Class="ID648.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource Help.WindowTitle}"
+        Width="580"
+        MinWidth="520"
+        Height="460"
+        MinHeight="420"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource WindowBackgroundBrush}">
+    <Window.Resources>
+        <Style TargetType="{x:Type Hyperlink}">
+            <Setter Property="Foreground" Value="#3B82F6" />
+            <Setter Property="TextDecorations" Value="Underline" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#60A5FA" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Border Background="{DynamicResource WindowBackgroundBrush}"
+            BorderBrush="{DynamicResource ControlBorderBrush}"
+            BorderThickness="1"
+            Padding="18">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock FontSize="20"
+                       FontWeight="SemiBold"
+                       Foreground="{DynamicResource ControlForegroundBrush}"
+                       Text="{DynamicResource Help.Header}" />
+
+            <TextBlock Grid.Row="1"
+                       Margin="0,10,0,0"
+                       Foreground="{DynamicResource SecondaryForegroundBrush}"
+                       Text="{DynamicResource Help.Subtitle}"
+                       TextWrapping="Wrap" />
+
+            <TextBlock Grid.Row="2"
+                       Margin="0,18,0,8"
+                       Foreground="{DynamicResource ControlForegroundBrush}"
+                       FontWeight="SemiBold"
+                       Text="{DynamicResource Help.LanguageLabel}" />
+
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="LanguageComboBox"
+                          Width="220"
+                          HorizontalAlignment="Left"
+                          SelectionChanged="LanguageComboBox_SelectionChanged">
+                    <ComboBoxItem Tag="system" Content="{DynamicResource Language.System}" />
+                    <ComboBoxItem Tag="en" Content="{DynamicResource Language.English}" />
+                    <ComboBoxItem Tag="ko" Content="{DynamicResource Language.Korean}" />
+                    <ComboBoxItem Tag="ja" Content="{DynamicResource Language.Japanese}" />
+                    <ComboBoxItem Tag="es" Content="{DynamicResource Language.Spanish}" />
+                </ComboBox>
+
+                <Border Grid.Row="1"
+                        Margin="0,16,0,0"
+                        Padding="14"
+                        Background="{DynamicResource PanelBackgroundBrush}"
+                        BorderBrush="{DynamicResource ControlBorderBrush}"
+                        BorderThickness="1">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <TextBox Foreground="{DynamicResource ControlForegroundBrush}"
+                                 Text="{DynamicResource Help.Body}"
+                                 TextWrapping="Wrap"
+                                 IsReadOnly="True"
+                                 AcceptsReturn="True"
+                                 BorderThickness="0"
+                                 Background="Transparent"
+                                 VerticalScrollBarVisibility="Auto"
+                                 HorizontalScrollBarVisibility="Disabled" />
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="4" Margin="0,18,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Foreground="{DynamicResource SecondaryForegroundBrush}"
+                               Text="{DynamicResource Help.HomepageLabel}" />
+                    <TextBlock Margin="0,4,0,0"
+                               Foreground="{DynamicResource ControlForegroundBrush}">
+                        <Hyperlink Click="HomepageLink_Click">https://www.woongsoft.com</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                    <Button MinWidth="110"
+                            Padding="14,8"
+                            Click="CopyButton_Click"
+                            Content="Copy"
+                            ToolTip="Copy help text to clipboard (Ctrl+C)"
+                            Margin="0,0,8,0" />
+                    <Button MinWidth="110"
+                            Padding="18,8"
+                            Click="ConfirmButton_Click"
+                            IsDefault="True"
+                            Content="{DynamicResource Button.OK}"
+                            Style="{StaticResource ProminentActionButtonStyle}" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
