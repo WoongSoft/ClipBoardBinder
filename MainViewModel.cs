@@ -818,16 +818,12 @@ namespace ID648
 
         private async void TrySetClipboardData(string? clipboardText,IEnumerable<string> filePaths)
         {
-            var includeFileDropList = string.IsNullOrEmpty(clipboardText);
             var fileDropList = new StringCollection();
-            if(includeFileDropList)
+            foreach(var filePath in filePaths
+                .Where(path => !string.IsNullOrWhiteSpace(path))
+                .Distinct(StringComparer.OrdinalIgnoreCase))
             {
-                foreach(var filePath in filePaths
-                    .Where(path => !string.IsNullOrWhiteSpace(path))
-                    .Distinct(StringComparer.OrdinalIgnoreCase))
-                {
-                    fileDropList.Add(filePath);
-                }
+                fileDropList.Add(filePath);
             }
 
             for(var attempt = 0; attempt < 3; attempt++)
@@ -842,7 +838,7 @@ namespace ID648
                         dataObject.SetData(DataFormats.Text,clipboardText);
                     }
 
-                    if(includeFileDropList && fileDropList.Count > 0)
+                    if(fileDropList.Count > 0)
                     {
                         dataObject.SetFileDropList(fileDropList);
                     }

@@ -7,13 +7,13 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="6f0d648b-56bb-476d-bb50-8dd8e5c5de5a"
-    Publisher="CN=kwoon"
-    Version="1.0.10.0" />
+    Name="WoongSoft.ClipBoardBinder"
+    Publisher="CN=319F2B6A-B70F-4B50-8C82-EF0DB41B2CB3"
+    Version="1.0.17.0" />
 
   <Properties>
-    <DisplayName>clipboard</DisplayName>
-    <PublisherDisplayName>kwoon</PublisherDisplayName>
+    <DisplayName>ClipBoardBinder</DisplayName>
+    <PublisherDisplayName>WoongSoft</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
 
