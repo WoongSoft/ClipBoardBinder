@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
   <sys:String x:Key="App.Title">ClipBoardBinder</sys:String>
+  <sys:String x:Key="Menu.PrivacyPolicy">プライバシーポリシー</sys:String>
   <sys:String x:Key="App.UnexpectedError">予期しないエラーが発生しました。</sys:String>
   <sys:String x:Key="App.UnknownError">不明なエラーが発生しました。</sys:String>
   <sys:String x:Key="App.ErrorSourceLabel">発生元</sys:String>
@@ -22,6 +23,7 @@
   <sys:String x:Key="Menu.Settings">設定</sys:String>
   <sys:String x:Key="Menu.About">情報</sys:String>
   <sys:String x:Key="Menu.Help">ヘルプ</sys:String>
+  <sys:String x:Key="Menu.ThirdPartyNotices">サードパーティーのライセンス</sys:String>
   <sys:String x:Key="Menu.Homepage">ホームページ</sys:String>
   <sys:String x:Key="Language.System">システム既定</sys:String>
   <sys:String x:Key="Language.English">English</sys:String>
@@ -52,4 +54,7 @@
   <sys:String x:Key="Skipped.ItemsMessage">一部の項目はテキストファイルではないか、サイズが大きすぎるか、読み取れなかったため除外されました。{0}</sys:String>
   <sys:String x:Key="Clipboard.CapacityExceeded">クリップボードに収めるにはファイル数またはテキスト量が多すぎます。選択を減らすか、小さいテキストファイルを使用してください。</sys:String>
   <sys:String x:Key="Homepage.OpenFailed">ホームページを開けませんでした。</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.WindowTitle">サードパーティーのライセンス</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.Header">サードパーティーのライセンス</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.MoreInfo">詳細は上記リンクをご覧ください。</sys:String>
 </ResourceDictionary>

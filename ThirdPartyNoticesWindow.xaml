@@ -1,0 +1,67 @@
+<Window x:Class="ID648.ThirdPartyNoticesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource ThirdPartyNotices.WindowTitle}"
+        Width="520"
+        Height="400"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource WindowBackgroundBrush}">
+    <Window.Resources>
+        <Style TargetType="{x:Type Hyperlink}">
+            <Setter Property="Foreground" Value="#3B82F6" />
+            <Setter Property="TextDecorations" Value="Underline" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#60A5FA" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Border Padding="18"
+            Background="{DynamicResource WindowBackgroundBrush}"
+            BorderBrush="{DynamicResource ControlBorderBrush}"
+            BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock FontSize="18"
+                       FontWeight="SemiBold"
+                       Foreground="{DynamicResource ControlForegroundBrush}"
+                       Text="{DynamicResource ThirdPartyNotices.Header}" />
+
+            <ScrollViewer Grid.Row="1"
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled">
+                <StackPanel>
+                    <TextBlock Foreground="{DynamicResource ControlForegroundBrush}"
+                               FontWeight="SemiBold"
+                               Text="Microsoft.Extensions.DependencyInjection" />
+                    <TextBlock Margin="0,4,0,0"
+                               Foreground="{DynamicResource ControlForegroundBrush}"
+                               Text="License: MIT License" />
+                    <TextBlock Margin="0,0,0,0"
+                               Foreground="{DynamicResource ControlForegroundBrush}"
+                               Text="Copyright (c) Microsoft" />
+                    <TextBlock Margin="0,8,0,0"
+                               Foreground="{DynamicResource ControlForegroundBrush}">
+                        <Run Text="GitHub: "/>
+                        <Hyperlink NavigateUri="https://github.com/dotnet/runtime" RequestNavigate="Hyperlink_RequestNavigate">https://github.com/dotnet/runtime</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Margin="0,12,0,0"
+                               Foreground="{DynamicResource ControlForegroundBrush}"
+                               Text="{DynamicResource ThirdPartyNotices.MoreInfo}" />
+                </StackPanel>
+            </ScrollViewer>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+                <Button MinWidth="110" Padding="18,8" Click="CloseButton_Click" IsDefault="True" Content="OK" Style="{StaticResource ProminentActionButtonStyle}" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

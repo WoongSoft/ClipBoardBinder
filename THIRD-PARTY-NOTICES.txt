@@ -1,0 +1,13 @@
+THIRD-PARTY-NOTICES.txt
+
+This project uses the following third-party libraries:
+
+---
+
+Microsoft.Extensions.DependencyInjection
+License: MIT License
+Copyright (c) Microsoft
+
+GitHub: https://github.com/dotnet/runtime
+
+For more information, visit the above link.

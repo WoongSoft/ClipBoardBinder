@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
   <sys:String x:Key="App.Title">ClipBoardBinder</sys:String>
+  <sys:String x:Key="Menu.PrivacyPolicy">Privacy Policy</sys:String>
   <sys:String x:Key="App.UnexpectedError">An unexpected error occurred.</sys:String>
   <sys:String x:Key="App.UnknownError">An unknown error occurred.</sys:String>
   <sys:String x:Key="App.ErrorSourceLabel">Source</sys:String>
@@ -22,6 +23,7 @@
   <sys:String x:Key="Menu.Theme.Light">Light Mode</sys:String>
   <sys:String x:Key="Menu.Language">Language</sys:String>
   <sys:String x:Key="Menu.Help">Help</sys:String>
+  <sys:String x:Key="Menu.ThirdPartyNotices">Third-Party Notices</sys:String>
   <sys:String x:Key="Menu.Homepage">Homepage</sys:String>
   <sys:String x:Key="Language.System">System default</sys:String>
   <sys:String x:Key="Language.English">English</sys:String>
@@ -52,4 +54,7 @@
   <sys:String x:Key="Skipped.ItemsMessage">Some items were excluded because they are not text files, are too large, or could not be read.{0}</sys:String>
   <sys:String x:Key="Clipboard.CapacityExceeded">There are too many files or too much text content to place on the clipboard. Reduce the selection or use smaller text files.</sys:String>
   <sys:String x:Key="Homepage.OpenFailed">Unable to open the homepage.</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.WindowTitle">Third-Party Notices</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.Header">Third-Party Notices</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.MoreInfo">For more information, visit the above link.</sys:String>
 </ResourceDictionary>

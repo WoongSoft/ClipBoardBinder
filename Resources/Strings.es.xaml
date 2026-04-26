@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
   <sys:String x:Key="App.Title">ClipBoardBinder</sys:String>
+  <sys:String x:Key="Menu.PrivacyPolicy">Política de privacidad</sys:String>
   <sys:String x:Key="App.UnexpectedError">Se produjo un error inesperado.</sys:String>
   <sys:String x:Key="App.UnknownError">Se produjo un error desconocido.</sys:String>
   <sys:String x:Key="App.ErrorSourceLabel">Origen</sys:String>
@@ -22,6 +23,7 @@
   <sys:String x:Key="Menu.Settings">Ajustes</sys:String>
   <sys:String x:Key="Menu.About">Acerca de</sys:String>
   <sys:String x:Key="Menu.Help">Ayuda</sys:String>
+  <sys:String x:Key="Menu.ThirdPartyNotices">Avisos de terceros</sys:String>
   <sys:String x:Key="Menu.Homepage">Sitio web</sys:String>
   <sys:String x:Key="Language.System">Predeterminado del sistema</sys:String>
   <sys:String x:Key="Language.English">English</sys:String>
@@ -52,4 +54,7 @@
   <sys:String x:Key="Skipped.ItemsMessage">Algunos elementos se excluyeron porque no son archivos de texto, son demasiado grandes o no se pudieron leer.{0}</sys:String>
   <sys:String x:Key="Clipboard.CapacityExceeded">Hay demasiados archivos o demasiado texto para colocarlos en el portapapeles. Reduzca la selección o use archivos de texto más pequeños.</sys:String>
   <sys:String x:Key="Homepage.OpenFailed">No se pudo abrir el sitio web.</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.WindowTitle">Avisos de terceros</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.Header">Avisos de terceros</sys:String>
+  <sys:String x:Key="ThirdPartyNotices.MoreInfo">Para más información, visite el enlace anterior.</sys:String>
 </ResourceDictionary>

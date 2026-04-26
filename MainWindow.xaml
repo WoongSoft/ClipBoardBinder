@@ -152,6 +152,8 @@
                         <MenuItem Header="{DynamicResource Menu.Help}">
                             <MenuItem Header="{DynamicResource Menu.Help}" Click="HelpMenuItem_Click" />
                             <MenuItem Header="{DynamicResource Menu.Homepage}" Click="HomepageMenuItem_Click" />
+                            <MenuItem Header="{DynamicResource Menu.PrivacyPolicy}" Click="PrivacyPolicyMenuItem_Click" />
+                            <MenuItem Header="{DynamicResource Menu.ThirdPartyNotices}" Click="ThirdPartyNoticesMenuItem_Click" />
                             <Separator />
                             <MenuItem Header="{DynamicResource Menu.About}" Click="AboutMenuItem_Click" />
                         </MenuItem>

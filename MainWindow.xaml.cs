@@ -14,6 +14,7 @@ namespace ID648
 {
     public partial class MainWindow : Window
     {
+        private const string PrivacyPolicyUrl = "https://www.woongsoft.com/privacy-policy/";
         private const int WM_CLIPBOARDUPDATE = 0x031D;
         private const int WM_NCACTIVATE = 0x0086;
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
@@ -412,6 +413,42 @@ namespace ID648
             };
 
             helpWindow.ShowDialog();
+        }
+
+        private void ThirdPartyNoticesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var tpWindow = new ThirdPartyNoticesWindow()
+                {
+                    Owner = this
+                };
+                tpWindow.ShowDialog();
+            }
+            catch (Exception)
+            {
+                ThemedMessageDialog.Show("Failed to open third-party notices window.", "Error", MessageBoxImage.Error);
+            }
+        }
+
+        private void PrivacyPolicyMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (!NetworkInterface.GetIsNetworkAvailable())
+                {
+                    ThemedMessageDialog.Show(Localization.GetString("Homepage.NoNetwork"), Localization.GetString("App.Title"), MessageBoxImage.Warning);
+                    return;
+                }
+                Process.Start(new ProcessStartInfo(PrivacyPolicyUrl)
+                {
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception)
+            {
+                ThemedMessageDialog.Show(Localization.GetString("Link.OpenFailed"), Localization.GetString("App.Title"), MessageBoxImage.Error);
+            }
         }
     }
 }

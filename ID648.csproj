@@ -2,12 +2,19 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <AssemblyName>ClipBoardBinder</AssemblyName>
+    <StartupObject>ID648.App</StartupObject>
     <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <UseWPF>true</UseWPF>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ClipBoardBinderIcon.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include=".github\copilot-instructions.md" />
   </ItemGroup>
